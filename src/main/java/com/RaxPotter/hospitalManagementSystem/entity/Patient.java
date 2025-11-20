@@ -2,8 +2,10 @@ package com.RaxPotter.hospitalManagementSystem.entity;
 
 import com.RaxPotter.hospitalManagementSystem.entity.type.BloodGroupType;
 import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.metamodel.IdentifiableType;
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
@@ -41,7 +43,7 @@ public class Patient {
     private BloodGroupType bloodGroup;
 
     @ToString.Exclude
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn
     private Insurance insurance;
 

@@ -2,6 +2,7 @@ package com.RaxPotter.hospitalManagementSystem;
 
 import com.RaxPotter.hospitalManagementSystem.entity.Patient;
 import com.RaxPotter.hospitalManagementSystem.repository.PatientRepository;
+import com.RaxPotter.hospitalManagementSystem.service.PatientService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,9 @@ public class PatientTests {
 
     @Autowired
     private PatientRepository patientRepository;
+
+    @Autowired
+    private PatientService patientService;
 
     @Test
     public void testPatientRepository(){

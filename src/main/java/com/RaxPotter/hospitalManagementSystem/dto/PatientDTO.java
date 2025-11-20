@@ -6,7 +6,8 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class PatientResponseDto {
+public class PatientDTO {
+
     private Long id;
     private String name;
     private String gender;
